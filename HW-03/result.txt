@@ -1,0 +1,50 @@
+>>> from news.models import *
+>>> user1 = User.objects.create_user('ItsShonn')
+>>> user2 = User.objects.create_user('SHOOTka23')
+>>> au1 = Author.objects.create(username=user1)
+>>> au2 = Author.objects.create(username=user2)
+>>> cat1 = Category.objects.create(name='Sports')
+>>> cat2 = Category.objects.create(name='Food')
+>>> cat3 = Category.objects.create(name='Politics')
+>>> cat4 = Category.objects.create(name='Games')
+>>> art1 = Post.objects.create(author=au1, type=Post.article, title='Бегайте с сосисками', content='Это полезно')
+>>> art2 = Post.objects.create(author=au2, type=Post.article, title='Россия - сила', content='И это главное')
+>>> news1 = Post.objects.create(author=au2, type=Post.news, title='Смута 2 вышла', content='Срочные новости!')
+>>> art1.categories.add(cat1, cat2)
+>>> art2.categories.add(cat3)
+>>> news1.categories.add(cat4)
+>>> com1 = Comment.objects.create(post=art1, username=user2, content='Он врёт!')
+>>> com2 = Comment.objects.create(post=art1, username=user1, content='Не слушайте его!!!')
+>>> com3 = Comment.objects.create(post=art2, username=user1, content='Слава России')
+>>> com4 = Comment.objects.create(post=news1, username=user1, content='Не играйте пж')
+>>> for i in range(10): art1.like()
+...
+>>> for i in range(7): art2.like()
+...
+>>> for i in range(15): news1.like()
+...
+>>> for i in range(6): com1.dislike()
+...
+>>> for i in range(2): com2.like()
+...
+>>> for i in range(7): com3.like()
+...
+>>> for i in range(9): com4.like()
+...
+>>> au1.update_rating()
+>>> au2.update_rating()
+>>> best_author = Author.objects.all().order_by('-rating')[0]
+>>> print(f'Username: {best_author.username.username}, rating: {best_author.rating}')
+Username: SHOOTka23, rating: 76
+>>> posts = dict()
+>>> for post in Post.objects.all():
+...     posts.update({post:0})
+...     for comment in Comment.objects.filter(post=post.id):
+...             posts[post] += comment.rating
+...
+>>> max = max(posts.items(), key= lambda x: x[1])[0]
+>>> print(f'Date: {max.date}, author: {max.author.username.username}, rating: {max.rating}, title: {max.title}, preview: {max.preview()}')
+Date: 2024-08-06 15:53:49.631796+00:00, author: SHOOTka23, rating: 15, title: Смута 2 вышла, preview: Срочные новости!...
+>>> for com in Comment.objects.filter(post=max): print(com.content)
+...
+Не играйте пж
