@@ -1,0 +1,24 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}
+
+{% block title %}
+News
+{% endblock title %}
+
+{% block content %}
+    <h1>Все новости</h1>
+    <font align='left'>
+        <p><strong> Количество новостей - {{ news|length }} </strong></p>
+        <ul>
+            {% for new in news %}
+
+                <li><a href="{% url 'news' %}{{ new.id }}" style="color: black"><h3> {{ new.title }} </h3></a>
+                    <p> {{ new.date|date:'d M Y' }} </p>
+                    <p><i> {{ new.content|truncatewords:20|censor }} </i></p>
+                </li>
+
+            {% endfor %}
+        </ul>
+    </font>
+{% endblock content %}
