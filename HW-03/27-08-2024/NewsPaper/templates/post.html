@@ -1,0 +1,14 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+Post
+{% endblock title %}
+
+{% block content %}
+    <font align='left'><br><br>
+        <h1>{{ post.title }}</h1><br>
+        <p>{{ post.date|date:"d M Y" }}</p>
+        <p>Автор статьи - {{ post.author.username }}</p>
+        <p><big>{{ post.content }} {{ post.type }}</big></p>
+    </font>
+{% endblock content %}
