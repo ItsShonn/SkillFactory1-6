@@ -1,0 +1,59 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}
+
+{% block title %}
+News
+{% endblock title %}
+
+{% block content %}
+{% if 'categories' in request.GET %}
+<button> <a href="/category/subscribe/{{ request.GET.categories }}">Подписаться</a> </button>
+<h1>Категория {% category %}</h1>
+<h2>{% get_sub %}</h2>
+{% else %}
+<h1>Выберите категорию!</h1>
+<h2>{% get_sub %}</h2>
+{% endif %}
+
+
+    <form action="" method="get">
+           {# Переменная, которую мы передали через контекст, может сгенерировать нам форму с полями #}
+           {{ filterset.form.as_p }}
+           {# Добавим кнопку отправки данных формы #}
+           <input type="submit" value="Найти" />
+       </form>
+
+    <h2>Все новости</h2>
+        <p align='left'><strong> Количество новостей - {{ news|length }} </strong></p>
+        <ul >
+            {% for new in news %}
+
+                <li><a href="{% url 'news' %}{{ new.id }}" style="color: black" ><p align='left'><big> {{ new.title }} </big></p></a>
+                    <p align='left'> {{ new.date|date:'d M Y' }} </p>
+                    <p align='left'><i> {{ new.content|truncatewords:20|censor }} </i></p>
+                </li>
+
+            {% endfor %}
+        </ul>
+
+
+    {% if page_obj.has_previous %}
+       <a href="?page=1">1</a>
+       {% if page_obj.previous_page_number != 1 %}
+           ...
+           <a href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
+       {% endif %}
+   {% endif %}
+
+   {{ page_obj.number }}
+
+   {% if page_obj.has_next %}
+       <a href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
+       {% if paginator.num_pages != page_obj.next_page_number %}
+           ...
+           <a href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+       {% endif %}
+   {% endif %}
+
+{% endblock content %}

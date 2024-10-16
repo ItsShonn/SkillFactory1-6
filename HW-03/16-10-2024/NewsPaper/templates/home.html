@@ -1,0 +1,14 @@
+{% extends 'flatpages/default.html' %}
+
+{% block content %}
+{% load cache %}
+{% cache 30 hello %}
+<h1>Приветствуем, {{request.user.username}}!</h1>
+<button> <a href="news/">К списку новостей</a> </button>
+<button> <a href="category/">К категориям</a> </button>
+<button> <a href="accounts/logout/">Выйти</a> </button>
+{% if is_not_author %}
+<button> <a href="upgrade/">Стать автором</a> </button>
+{% endif %}
+{% endcache %}
+{% endblock content %}

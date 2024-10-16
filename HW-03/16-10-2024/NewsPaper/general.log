@@ -1,0 +1,43 @@
+Watching for file changes with StatReloader
+"GET /category/? HTTP/1.1" 200 34087
+C:\Users\leona\PycharmProjects\TaskProject\NewsPaper\NewsPaper\settings.py changed, reloading.
+2024-10-16 16:52:48,993 INFO Watching for file changes with StatReloader C:\Users\leona\PycharmProjects\TaskProject\venv\Lib\site-packages\django\utils\autoreload.py None
+2024-10-16 16:53:26,163 INFO C:\Users\leona\PycharmProjects\TaskProject\NewsPaper\NewsPaper\settings.py changed, reloading. C:\Users\leona\PycharmProjects\TaskProject\venv\Lib\site-packages\django\utils\autoreload.py None
+2024-10-16 16:53:27,003 INFO autoreload Watching for file changes with StatReloader
+2024-10-16 16:53:29,620 INFO basehttp "GET /category/? HTTP/1.1" 200 34087
+2024-10-16 16:54:19,229 INFO autoreload C:\Users\leona\PycharmProjects\TaskProject\NewsPaper\NewsPaper\settings.py changed, reloading.
+2024-10-16 16:54:20,111 INFO autoreload Watching for file changes with StatReloader
+2024-10-16 16:54:26,799 INFO autoreload C:\Users\leona\PycharmProjects\TaskProject\NewsPaper\NewsPaper\settings.py changed, reloading.
+2024-10-16 16:54:27,643 INFO autoreload Watching for file changes with StatReloader
+2024-10-16 16:54:27,643 INFO autoreload Watching for file changes with StatReloader
+2024-10-16 16:54:37,487 INFO autoreload C:\Users\leona\PycharmProjects\TaskProject\NewsPaper\NewsPaper\settings.py changed, reloading.
+2024-10-16 16:54:37,487 INFO autoreload C:\Users\leona\PycharmProjects\TaskProject\NewsPaper\NewsPaper\settings.py changed, reloading.
+2024-10-16 16:54:38,358 INFO autoreload Watching for file changes with StatReloader
+2024-10-16 16:55:02,915 INFO autoreload C:\Users\leona\PycharmProjects\TaskProject\NewsPaper\NewsPaper\settings.py changed, reloading.
+2024-10-16 16:55:03,758 INFO autoreload Watching for file changes with StatReloader
+2024-10-16 16:55:40,927 INFO autoreload C:\Users\leona\PycharmProjects\TaskProject\NewsPaper\NewsPaper\settings.py changed, reloading.
+2024-10-16 16:55:41,761 INFO autoreload Watching for file changes with StatReloader
+2024-10-16 16:56:13,746 INFO autoreload C:\Users\leona\PycharmProjects\TaskProject\NewsPaper\NewsPaper\settings.py changed, reloading.
+2024-10-16 17:11:53,653 INFO autoreload Watching for file changes with StatReloader
+2024-10-16 17:13:16,440 INFO autoreload C:\Users\leona\PycharmProjects\TaskProject\NewsPaper\NewsPaper\settings.py changed, reloading.
+2024-10-16 17:13:17,358 INFO autoreload Watching for file changes with StatReloader
+2024-10-16 17:13:35,662 INFO autoreload C:\Users\leona\PycharmProjects\TaskProject\NewsPaper\NewsPaper\settings.py changed, reloading.
+2024-10-16 17:13:36,491 INFO autoreload Watching for file changes with StatReloader
+2024-10-16 17:13:55,986 INFO autoreload C:\Users\leona\PycharmProjects\TaskProject\NewsPaper\NewsPaper\settings.py changed, reloading.
+2024-10-16 17:13:56,874 INFO autoreload Watching for file changes with StatReloader
+2024-10-16 17:14:39,362 INFO autoreload C:\Users\leona\PycharmProjects\TaskProject\NewsPaper\NewsPaper\settings.py changed, reloading.
+2024-10-16 17:14:40,246 INFO autoreload Watching for file changes with StatReloader
+2024-10-16 17:14:55,577 INFO autoreload C:\Users\leona\PycharmProjects\TaskProject\NewsPaper\NewsPaper\settings.py changed, reloading.
+2024-10-16 17:15:10,577 INFO autoreload Watching for file changes with StatReloader
+2024-10-16 17:17:51,396 INFO autoreload C:\Users\leona\PycharmProjects\TaskProject\NewsPaper\NewsPaper\settings.py changed, reloading.
+2024-10-16 17:17:52,271 INFO autoreload Watching for file changes with StatReloader
+2024-10-16 17:18:22,471 INFO autoreload Watching for file changes with StatReloader
+2024-10-16 17:18:49,769 INFO autoreload Watching for file changes with StatReloader
+2024-10-16 17:21:14,512 INFO autoreload C:\Users\leona\PycharmProjects\TaskProject\NewsPaper\NewsPaper\settings.py changed, reloading.
+2024-10-16 17:37:01,160 INFO autoreload Watching for file changes with StatReloader
+2024-10-16 17:37:03,659 INFO basehttp "GET /category/?categories=29 HTTP/1.1" 200 21659
+2024-10-16 17:37:11,226 INFO basehttp "GET /category/?categories=29 HTTP/1.1" 200 21659
+2024-10-16 17:37:12,220 INFO basehttp "GET /category/?categories=29 HTTP/1.1" 200 21659
+2024-10-16 17:37:23,778 INFO basehttp "GET /category/subscribe/29 HTTP/1.1" 302 0
+2024-10-16 17:37:23,794 INFO basehttp "GET /category/?categories=29 HTTP/1.1" 200 21659
+2024-10-16 17:37:44,982 INFO autoreload C:\Users\leona\PycharmProjects\TaskProject\NewsPaper\NewsPaper\settings.py changed, reloading.
